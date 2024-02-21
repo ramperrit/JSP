@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
+<%@ page import="java.util.ArrayList" %>
+
+<jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session"/>
+<html>
+<head>
+<link rel = "stylesheet"
+	href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+<title>상품 목록</title>
+</head>
+<body>
+	
+</body>
+</html>
