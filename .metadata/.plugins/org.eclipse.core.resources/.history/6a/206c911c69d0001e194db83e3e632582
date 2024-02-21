@@ -1,0 +1,8 @@
+package ch04.dao;
+
+public class person {
+	private int id = 20181004;
+	private String name = "홍길순";
+	
+	public person() {}
+}
