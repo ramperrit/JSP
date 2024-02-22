@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
+<html>
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="fileForm" method="post" enctype="multipart/form-data" action="fileUpload01_process.jsp">
+		<p> 이 름 : <input type="text" name="name">
+		<p> 제 목 : <input type="text" name="subject">
+		<p> 파 일1 : <input type="file" name="filename1">
+		<p> 파 일2 : <input type="file" name="filename2">
+		<p> 파 일3 : <input type="file" name="filename3">
+		<p> <input type="submit" value="파일 올리기">
+	</form>
+</body>
+</html>
