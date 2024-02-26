@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;JSPBook/src/main/java/ch09/myBundle.properties&apos; to &apos;myBundle_ko.properties&apos;" description="Rename resource &apos;myBundle.properties&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/ch09/myBundle.properties" name="myBundle_ko.properties" stamp="1708911997767" updateReferences="true"/>
+</session>
