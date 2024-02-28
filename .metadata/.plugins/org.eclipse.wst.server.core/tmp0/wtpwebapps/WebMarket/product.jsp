@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@ page import="dto.Product" %>
 <%@ page import="dao.ProductRepository" %>
+<%@ page errorPage="exceptionNoProductId.jsp" %>
 <html>
 <head>
 <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
