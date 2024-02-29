@@ -1,8 +1,10 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
-<%@ page import="java.util.Date" %>
+<!DOCTYPE html>
 <html>
 <head>
 <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<link rel = "stylesheet" href = "./resources/css/bootstrap.min.css" />
 <title>Welcome</title>
 </head>
 <body>

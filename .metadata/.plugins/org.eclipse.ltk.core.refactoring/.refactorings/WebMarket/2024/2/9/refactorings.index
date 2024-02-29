@@ -2,3 +2,6 @@
 1709089841429	Move 'bundle' to 'java'
 1709089968341	Move package
 1709089979582	Move files
+1709172843107	Delete element
+1709173297952	Rename resource 'welcome.jsp'
+1709173315007	Rename resource 'Welcome.jsp'
