@@ -28,7 +28,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-5">
-			<img src="c:/upload/<%= rs.getString("p_fileName")%>" alt="image" style="width: 100%"/>
+			<img src="/upload/<%= rs.getString("p_fileName")%>" alt="image" style="width: 100%"/>
 		</div>
 		<div class="col-md-7">
 			<form name="newProduct" action="./processUpdateProduct.jsp" class="form-horizontal" method="post" enctype="multipart/form-data">
@@ -53,7 +53,7 @@
 				<div class="form-group row">
 					<label class="col-sm-2">상세 설명</label>
 					<div class="col-sm-3">
-						<textarea name="description" cols="50" rows="2" class="form-control"><%=rs.getString("p_description") %></textarea>>
+						<textarea name="description" cols="50" rows="5" class="form-control"><%=rs.getString("p_description") %></textarea>
 					</div>
 				</div>
 				<div class="form-group row">

@@ -33,6 +33,13 @@ public class Product implements Serializable{
 		this.filename = filename;
 	}
 
+	@Override
+	public String toString() {
+		return "Product [productId=" + productId + ", pname=" + pname + ", unitPrice=" + unitPrice + ", description="
+				+ description + ", manufacturer=" + manufacturer + ", category=" + category + ", unitsInStock="
+				+ unitsInStock + ", condition=" + condition + ", filename=" + filename + ", quantity=" + quantity + "]";
+	}
+
 	public Product() {
 		super();
 	}

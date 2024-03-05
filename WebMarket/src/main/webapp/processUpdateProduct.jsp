@@ -48,7 +48,7 @@
 		
 		if(rs.next()){
 			if(fileName != null){
-				sql = "UPDATE PRODUCT SET p_name=?, p_unitPrice=?, p_descrption=?, p_manufacturer=?, p_category=?, p_unitsInStock=?, p_condition=?, p_fileName=? WHERE p_ID=?";
+				sql = "UPDATE PRODUCT SET p_name=?, p_unitPrice=?, p_description=?, p_manufacturer=?, p_category=?, p_unitsInStock=?, p_condition=?, p_fileName=? WHERE p_ID=?";
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setString(1,name);
 				pstmt.setInt(2,price);
@@ -61,7 +61,7 @@
 				pstmt.setString(9,productId);
 				pstmt.executeUpdate();
 			}else{
-				sql = "UPDATE product SET p_name=?, p_unitPrice=?, p_descrption=?, p_manufacturer=?, p_category=?, p_unitsInStock=?, p_condition=?, p_fileName=? WHERE p_ID=?";
+				sql = "UPDATE product SET p_name=?, p_unitPrice=?, p_description=?, p_manufacturer=?, p_category=?, p_unitsInStock=?, p_condition=? WHERE p_ID=?";
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setString(1,name);
 				pstmt.setInt(2,price);
@@ -70,8 +70,7 @@
 				pstmt.setString(5,category);
 				pstmt.setLong(6,stock);
 				pstmt.setString(7,condition);
-				pstmt.setString(8,fileName);
-				pstmt.setString(9,productId);
+				pstmt.setString(8,productId);
 				pstmt.executeUpdate();
 			}
 		}

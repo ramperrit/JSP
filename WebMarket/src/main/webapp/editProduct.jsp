@@ -8,7 +8,7 @@
 <script type="text/javascript">
 function deleteConfirm(id){
 	if(confirm("해당 상품을 삭제합니다.")==true)
-		location.href = "./delete{roduct.jsp?id=" + id;
+		location.href = "./delete{product.jsp?id=" + id;
 	else
 		return;
 }
@@ -34,14 +34,14 @@ function deleteConfirm(id){
 				while(rs.next()){
 			%>
 			<div class="col-md-4">
-				<img src="c:/upload/<%=rs.getString("p_fileName")%>" style="width: 100%"/>
-				<h3><%= rs.getString("p_name") %></h3>
-				<h3><%= rs.getString("p_description") %></h3>
-				<h3><%= rs.getString("p_UnitPrice") %></h3>원
-				<p><%
+				<img src="/upload/<%=rs.getString("p_fileName")%>" style="width: 100%"/>
+				<h2><%= rs.getString("p_name") %></h2>
+				<h4><%= rs.getString("p_description") %></h4>
+				<h3><%= rs.getString("p_UnitPrice") %>원</h3>
+				<%
 					if (edit.equals("update")){
 						%>
-				<a href="./updateProduct.jsp?id=<rs.getString("p_id")%>" class="btn btn-success" role="button">수정 &raquo;></a>
+				<a href="./updateProduct.jsp?id=<%= rs.getString("p_id")%>" class="btn btn-success" role="button">수정 &raquo;></a>
 				<%
 					} else if(edit.equals("delete")){
 				%>

@@ -14,7 +14,7 @@ public class ProductRepository {
 	}
 	
 	public ProductRepository() {
-		Product phone = new Product("P1234", "iPhone 6s", 800000);
+		Product phone = new Product("P1234", "iPhone 6s", 2800000);
 		phone.setDescription("4.7-inch, 1334X750 Renina HD display, 8-megapixel iSight Camera");
 		phone.setCategory("Smart Phone");
 		phone.setManufacturer("Apple");
@@ -29,6 +29,7 @@ public class ProductRepository {
 		notebook.setUnitsInStock(1000);
 		notebook.setCondition("Refurbished");
 		notebook.setFilename("P1235.png");
+		
 		
 		
 		Product tablet = new Product("P1236", "Galaxy Tab S", 900000);
@@ -51,9 +52,10 @@ public class ProductRepository {
 	
 	public Product getProductById(String productId) {
 		Product productById = null;
-		
+		System.out.println("ssss");
 		for(int i=0; i<listOfProducts.size();i++) {
 			Product product = listOfProducts.get(i);
+			System.out.println(product);
 			if(product != null && product.getProductId() != null && product.getProductId().equals(productId)) {
 				productById = product;
 				break;
