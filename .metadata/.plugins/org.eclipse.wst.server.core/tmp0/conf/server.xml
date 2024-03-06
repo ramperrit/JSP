@@ -161,7 +161,7 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
       
-      
+
       <Context docBase="C:\Users\CodePC\eclipse-workspace\JSP_MiniProject\src\main\webapp" path="" reloadable="true"/>
       <Context docBase="C:\upload" path="/upload" reloadable="true"/>
       </Host>

@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
 <meta charset="utf-8" />
@@ -33,7 +34,7 @@
             <div id="page-content-wrapper">
                 <%@ include file = "/topNavigation.jsp" %>
                 <div class="container-fluid">
-                    <form name="newMember" class="form-horizontal"  action="processAddMember.jsp" method="post" onsubmit="return checkForm()"><br>
+                    <form name="newMember" class="form-horizontal"  action="processSignUp.jsp" method="post" onsubmit="return checkForm()"><br>
 			<div class="form-group  row">
 				<label class="col-sm-2 ">아이디</label>
 				<div class="col-sm-3">

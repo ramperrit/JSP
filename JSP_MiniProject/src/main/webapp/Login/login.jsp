@@ -26,15 +26,15 @@
 					out.println("</div>");
 				}
 			%>
-			<form class="form-signin" action="j_security_check" method="post">
+			<form class="form-signin" action="processLogin.jsp" method="post">
 				<div class="form-group">
 					<label for="inputUserName" class="sr-only">ID</label>
-					<input type="text" class="form-control" placeholder="ID" name='j_username' style="width:10%" required autofocus>
+					<input type="text" class="form-control" placeholder="ID" name='id' style="width:10%" required autofocus>
 				</div>
 				<br>
 				<div class="form-group">
 					<label for="inputPassword" class="sr-only">Password</label>
-					<input type="password" class="form-control" placeholder="Password" name='j_password' style="width:10%" required>
+					<input type="password" class="form-control" placeholder="Password" name='password' style="width:10%" required>
 				</div>
 				<br>
 				<button class="btn btn btn-lg btn-success btn-block" type="submit">로그인</button>
