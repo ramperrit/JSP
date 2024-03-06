@@ -162,7 +162,8 @@
 
       
       
-      <Context docBase="C:\Users\CodePC\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\upload" path="/upload" reloadable="true"/>
+      <Context docBase="C:\Users\CodePC\eclipse-workspace\JSP_MiniProject\src\main\webapp" path="" reloadable="true"/>
+      <Context docBase="C:\upload" path="/upload" reloadable="true"/>
       </Host>
     </Engine>
   </Service>

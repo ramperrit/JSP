@@ -161,9 +161,10 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
       
-      
+
+      <Context docBase="C:\Users\CodePC\eclipse-workspace\JSP_MiniProject\src\main\webapp" path="/" reloadable="true"/>
       <Context docBase="C:\upload" path="/upload" reloadable="true"/>
-      <Context docBase="WebMarket" path="/WebMarket" reloadable="true" source="org.eclipse.jst.jee.server:WebMarket"/></Host>
+      <Context docBase="JSP_MiniProject" path="/JSP_MiniProject" reloadable="true" source="org.eclipse.jst.jee.server:JSP_MiniProject"/><Context docBase="WebMarket" path="/WebMarket" reloadable="true" source="org.eclipse.jst.jee.server:WebMarket"/><Context docBase="JSPBook" path="/JSPBook" reloadable="true" source="org.eclipse.jst.jee.server:JSPBook"/></Host>
     </Engine>
   </Service>
 </Server>
