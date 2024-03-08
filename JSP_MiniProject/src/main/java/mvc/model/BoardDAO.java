@@ -92,7 +92,6 @@ public class BoardDAO {
 				board.setContent(rs.getString("content"));
 				Date a = rs.getDate("regist_day");
 				String b = a+"";
-				System.out.println(b);
 				board.setRegist_day(b);
 				board.setHit(rs.getInt("hit"));
 				list.add(board);

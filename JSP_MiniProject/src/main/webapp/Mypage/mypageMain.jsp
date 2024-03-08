@@ -34,12 +34,11 @@ String sessionId = (String) session.getAttribute("sessionId");
 				</h1>
 
 				<p>정보 수정, 내가 쓴 게시판, 간단 정보</p>
-				<a class="nav-link" href="/Member/updateMember.jsp">정보 수정</a>
+				<a class="btn btn-primary" href="/Member/updateMember.jsp">정보 수정</a>
 			</div>
 		</div>
 	</div>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="js/scripts.js"></script>
 </body>
 </html>

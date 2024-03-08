@@ -12,10 +12,12 @@
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 <link href="/resources/css/styles.css" rel="stylesheet" />
 <%
-String sessionId = (String) session.getAttribute("sessionId");
-BoardDTO notice = (BoardDTO) request.getAttribute("board");
-int num = ((Integer) request.getAttribute("num")).intValue();
-int nowpage = ((Integer) request.getAttribute("page")).intValue();
+	String sessionId = (String) session.getAttribute("sessionId");
+	pageContext.setAttribute("sessionId", sessionId);
+	BoardDTO notice = (BoardDTO) request.getAttribute("board");
+	pageContext.setAttribute("noticeId", notice.getId());
+	int num = ((Integer) request.getAttribute("num")).intValue();
+	int nowpage = ((Integer) request.getAttribute("page")).intValue();
 %>
 </head>
 <body>
@@ -29,9 +31,7 @@ int nowpage = ((Integer) request.getAttribute("page")).intValue();
 					action="BoardUpdateAction.do?num=<%=notice.getNum()%>&pageNum=<%=nowpage%>"
 					class="form-horizontal" method="post">
 					<c:choose>
-					<c:when test="${sessionId==notice.getId()}">
-					<%System.out.println(notice.getId()); 
-					System.out.println(sessionId);%>
+					<c:when test="${sessionId==noticeId}">
 						<div class="form-group row">
 							<label class="col-sm-2 control-label">작성자</label>
 							<div class="col-sm-3">
@@ -58,7 +58,7 @@ int nowpage = ((Integer) request.getAttribute("page")).intValue();
 									<a
 										href="/JSP_MiniProject/BoardDeleteAction.do?num=<%=notice.getNum()%>&pageNum=<%=nowpage%>"
 										class="btn btn-danger"> 삭제</a> <input type="submit"
-										class="btn btn-success" value="수정 "> <a
+										class="btn btn-success" value="수정"> <a
 										href="/JSP_MiniProject/BoardListAction.do?pageNum=<%=nowpage%>"
 										class="btn btn-primary"> 목록</a>
 							</div>
@@ -102,6 +102,5 @@ int nowpage = ((Integer) request.getAttribute("page")).intValue();
 	</div>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="js/scripts.js"></script>
 </body>
 </html>

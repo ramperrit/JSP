@@ -16,11 +16,10 @@
                 <%@ include file = "/topNavigation.jsp" %>
                 <div class="container-fluid">
                     <h1 class="mt-4">메인화면</h1>
-                    <p>뭐 적지</p>
+                    
                 </div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
 </body>
 </html>

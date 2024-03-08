@@ -10,6 +10,7 @@
         <link href="/resources/css/styles.css" rel="stylesheet" />
 </head>
 <body>
+<%String loginId = (String) session.getAttribute("sessionId"); %>
 	<div class="d-flex" id="wrapper">
             <%@ include file = "/sidebar.jsp" %>
             <div id="page-content-wrapper">
@@ -18,14 +19,13 @@
                     <div class="container" align="center" >
 		<%
 			String msg = request.getParameter("msg");
-
+			
 			if (msg != null) {
 				if (msg.equals("0"))
 					out.println(" <h2 class='alert alert-danger'>회원정보가 수정되었습니다.</h2>");
 				else if (msg.equals("1"))
 					out.println(" <h2 class='alert alert-danger'>회원가입을 축하드립니다.</h2>");
 				else if (msg.equals("2")) {
-					String loginId = (String) session.getAttribute("sessionId");
 					out.println(" <h2 class='alert alert-danger'>" + loginId + "님 환영합니다</h2>");
 					
 				}				
@@ -38,6 +38,5 @@
         </div>
    </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
 </body>
 </html>

@@ -28,8 +28,6 @@
 		<div id="page-content-wrapper">
 			<%@ include file="/topNavigation.jsp"%>
 			<div class="container-fluid">
-				<!-- 버튼생성 -->
-
 				<form action="<c:url value="/JSP_MiniProject/BoardListAction.do"/>" method="post">
 					<div>
 						<div class="text-right">
@@ -49,7 +47,6 @@
 							<%
 							for (int j = 0; j < boardList.size(); j++) {
 								BoardDTO notice = (BoardDTO) boardList.get(j);
-								System.out.println(notice.getRegist_day());
 							%>
 							<tr>
 								<td><%=notice.getNum()%></td>
@@ -67,7 +64,7 @@
 					<div align="center">
 						<c:set var="pageNum" value="<%=pageNum%>" />
 						<c:forEach var="i" begin="1" end="<%=total_page%>">
-							<a href="<c:url value="/JSP_MiniProject/BoardListAction.do?pageNum=${i}" /> ">
+							<a href="<c:url value="./BoardListAction.do?pageNum=${i}" /> ">
 								<c:choose>
 									<c:when test="${pageNum==i}">
 										<font color='4C5317'><b> [${i}]</b></font>
@@ -89,10 +86,10 @@
 										<option value="content">본문</option>
 										<option value="name">글쓴이</option>
 								</select> <input name="text" type="text" /> <input type="submit"
-									id="btnAdd" class="btn btn-primary " value="검색 " />
+									id="btnAdd" class="btn btn-primary " value="검색" />
 								</td>
 								<td width="100%" align="right"><a href="/Board/writeForm.jsp"
-									onclick="checkForm(); return false;" class="btn btn-primary">&laquo;글쓰기</a>
+									onclick="checkForm(); return false;" class="btn btn-primary">&laquo;<br>글쓰기</a>
 								</td>
 							</tr>
 						</table>
@@ -103,6 +100,5 @@
 	</div>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="js/scripts.js"></script>
 </body>
 </html>

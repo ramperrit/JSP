@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import mvc.model.BoardDAO;
 import mvc.model.BoardDTO;
 
+
 public class BoardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	static final int LISTCOUNT = 5; 
@@ -31,6 +32,10 @@ public class BoardController extends HttpServlet {
 		
 		response.setContentType("text/html; charset=utf-8");
 		request.setCharacterEncoding("utf-8");
+		if(request.getSession().getAttribute("sessionId") == null || request.getSession().getAttribute("sessionId").equals("null")) {
+			String loginId = request.getParameter("loginId");
+			request.getSession().setAttribute("sessionId", loginId);
+		}
 		
 	
 		if (command.equals("/BoardListAction.do")) {//��ϵ� �� ��� ������ ����ϱ�
@@ -164,4 +169,5 @@ public class BoardController extends HttpServlet {
 		BoardDAO dao = BoardDAO.getInstance();
 		dao.deleteBoard(num);							
 	}	
+	
 }
